@@ -1,0 +1,27 @@
+{
+  "name": "staticify-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "staticify": "./bin/staticify"
+  },
+  "scripts": {
+    "build": "npx babel src --out-dir dist"
+  },
+  "files": [
+    "dist/**",
+    "bin"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/plugin-transform-modules-commonjs": "^7.23.3",
+    "@babel/preset-env": "^7.23.9",
+    "minimist": "^1.2.8"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9"
+  }
+}
