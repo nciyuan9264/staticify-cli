@@ -1,5 +1,4 @@
 #!/usr/bin/env node
 
 'use strict';
-const entry = require('../dist/staticify.js').default;
-entry();
+require('../dist/staticify.js')();

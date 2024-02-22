@@ -1,5 +1,10 @@
-// .babelrc
 {
-  "presets": ["@babel/preset-env"],
-  // "plugins": ["@babel/plugin-transform-modules-commonjs"]
+  "presets": [
+    ["@babel/preset-env", {
+      // "targets": {
+      //   "browsers": ["last 2 versions", "safari >= 7"]
+      // },
+      // "modules": false // 禁用默认的模块转换行为
+    }]
+  ]
 }
