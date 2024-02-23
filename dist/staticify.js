@@ -32,9 +32,8 @@ module.exports = function entry() {
     string: ['_', 'p', 'path', 's', 'slug']
   });
   if (args._[0] === 'init') {
-    var name = args._[1];
     var template = args.template || 'js'; // 默认为js模板
-
+    var name = args._[1] || "webpack-".concat(template);
     var repositoryURL;
     if (template === 'ts') {
       // TypeScript模板的git仓库URL

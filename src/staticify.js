@@ -28,8 +28,8 @@ module.exports = function entry(cwd = process.cwd(), args) {
   args = args || minimist(process.argv.slice(2), { string: ['_', 'p', 'path', 's', 'slug'] });
 
   if (args._[0] === 'init') {
-    const name = args._[1];
     const template = args.template || 'js'; // 默认为js模板
+    const name = args._[1] || `webpack-${template}`;
 
     let repositoryURL;
     if (template === 'ts') {
