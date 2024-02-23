@@ -43,6 +43,9 @@ module.exports = function entry(cwd = process.cwd(), args) {
     // 使用Git命令进行clone
     try {
       execSync(`git clone ${repositoryURL} ${name}`, { stdio: 'inherit' });
+      process.chdir(name);
+      execSync('rm -rf .git');
+
       // 更新package.json和webpack配置文件
       const templatePath = path.join(cwd, name);
       updatePackageJson(name, templatePath);
