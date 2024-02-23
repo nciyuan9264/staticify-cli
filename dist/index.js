@@ -6,4 +6,5 @@ Object.defineProperty(exports, "__esModule", {
 exports.a = a;
 function a() {
   console.log(123);
-};
+}
+;
